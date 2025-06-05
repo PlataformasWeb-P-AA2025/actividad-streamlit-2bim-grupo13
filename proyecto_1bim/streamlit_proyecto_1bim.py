@@ -91,8 +91,8 @@ def listar_reacciones():
 
     for r in reacciones:
         with st.expander(f"Usuario ID {r.id_usuario} → {r.tipo_emocion} → Publicación ID {r.id_publicacion}", expanded=False):
-            usuario = r.publicacion.publicacion
-            publicacion = r.usuario.nombre
+            usuario = r.usuario.nombre
+            publicacion = r.publicacion.publicacion
             st.write(f"**Reacción:** {r.tipo_emocion}")
             st.write(f"**Usuario que Reaccionó:** {usuario}")
             st.write(f"**Publicación que Reacionó:** {publicacion}")
